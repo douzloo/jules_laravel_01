@@ -50,6 +50,10 @@ async function renderPdf(pdfUrl) {
             canvas.height = viewport.height;
             canvas.width = viewport.width;
 
+            // Make canvas responsive
+            canvas.style.width = '100%';
+            canvas.style.height = 'auto';
+
             pdfViewerContainer.appendChild(canvas);
 
             const renderContext = {
